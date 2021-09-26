@@ -1,7 +1,8 @@
-import { IconButton, AppBar, Toolbar } from "@mui/material";
+import { IconButton, AppBar, Toolbar, Collapse } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import SortIcon from "@mui/icons-material/Sort"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useState, useEffect } from "react";
 
 const useStyles = makeStyles(() => ({
     root:{
@@ -44,6 +45,10 @@ const useStyles = makeStyles(() => ({
   
   export default function Header() {
     const classes = useStyles();
+    const [checked, setChecked] = useState(false);
+        useEffect(() => {
+            setChecked(true);
+        }, []);
   
       return (
           <div className={classes.root}>
@@ -57,6 +62,12 @@ const useStyles = makeStyles(() => ({
                     </IconButton>
                 </Toolbar>
             </AppBar>
+            
+            <Collapse
+                in={checked}
+                { ... (checked ? { timeout: 1000 } : {})}
+                collapsedHeight={50}
+            >
                 <div className={classes.container}>
                     <h1 className={classes.welcomeText}>Hey there!
                     <br />I'm <span className={classes.textThemeColor}>Eon.</span>
@@ -65,6 +76,7 @@ const useStyles = makeStyles(() => ({
                         <KeyboardArrowDownIcon className={classes.scrollDownIcon} />
                     </IconButton>
                 </div>
+            </Collapse>
             </div>
       )
     }
