@@ -1,11 +1,12 @@
-import { CssBaseline } from "@mui/material";
+import { CssBaseline } from "@mui/material"
 import { makeStyles } from "@mui/styles"
+import Projects from "../components/Projects"
 import Header from "/components/Header"
 
 const useStyles = makeStyles(() => ({
   root: {
     minHeight: '100vh',
-    backgroundImage: `url(${'/assets/Background.jpg'})`,
+    backgroundImage: "url('/assets/Background.jpg')",
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
@@ -19,6 +20,7 @@ export default function Home() {
       <div className={classes.root}>
         <CssBaseline />
         <Header />
+        <Projects />
       </div>
     )
   }
