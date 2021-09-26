@@ -3,6 +3,12 @@ import { makeStyles } from "@mui/styles";
 import SortIcon from "@mui/icons-material/Sort"
 
 const useStyles = makeStyles(() => ({
+    root:{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+    },
     appBar: {
         background: 'none',
     },
@@ -18,7 +24,12 @@ const useStyles = makeStyles(() => ({
         fontSize: '2rem',
     },
     textThemeColor: {
-        color: '#ff409f',
+        color: '#ff43a4',
+    },
+    welcomeText: {
+        color: '#fff',
+        textAlign: 'center',
+        fontSize: '3rem',
     }
   }));
   
@@ -27,13 +38,23 @@ const useStyles = makeStyles(() => ({
     const classes = useStyles();
   
       return (
-        <AppBar className={classes.appBar} elevation={0}>
-            <Toolbar className={classes.appBarWrapper}>
-                <h1 className={classes.appBarTitle}>My<span className={classes.textThemeColor}>Skills.</span></h1>
-                <IconButton>
-                    <SortIcon className={classes.icon}/>
-                </IconButton>
-            </Toolbar>
-        </AppBar>
+          <div className={classes.root}>
+            <AppBar className={classes.appBar} elevation={0}>
+                <Toolbar className={classes.appBarWrapper}>
+                    <h1 className={classes.appBarTitle}>
+                        Eon<span className={classes.textThemeColor}>YY</span>
+                    </h1>
+                    <IconButton>
+                        <SortIcon className={classes.icon}/>
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
+                <div>
+                    <h1 className={classes.welcomeText}>
+                    Hey there!
+                    <br />I'm <span className={classes.textThemeColor}>Eon.</span>
+                    </h1>
+                </div>
+            </div>
       )
     }
