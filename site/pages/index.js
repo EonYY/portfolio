@@ -1,6 +1,6 @@
+import { CssBaseline } from "@mui/material";
 import { makeStyles } from "@mui/styles"
-
-
+import Header from "/components/Header"
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -16,6 +16,9 @@ export default function Home() {
   const classes = useStyles();
 
     return (
-      <div className={classes.root}></div>
+      <div className={classes.root}>
+        <CssBaseline />
+        <Header />
+      </div>
     )
   }
