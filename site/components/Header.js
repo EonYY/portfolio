@@ -1,6 +1,7 @@
 import { IconButton, AppBar, Toolbar } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import SortIcon from "@mui/icons-material/Sort"
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const useStyles = makeStyles(() => ({
     root:{
@@ -8,6 +9,9 @@ const useStyles = makeStyles(() => ({
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
+    },
+    container: {
+        textAlign: 'center',
     },
     appBar: {
         background: 'none',
@@ -30,7 +34,11 @@ const useStyles = makeStyles(() => ({
         color: '#fff',
         textAlign: 'center',
         fontSize: '3rem',
-    }
+    },
+    scrollDownIcon: {
+        fontSize: '3rem',
+        color: '#ff43a4',
+    },
   }));
   
   
@@ -49,11 +57,13 @@ const useStyles = makeStyles(() => ({
                     </IconButton>
                 </Toolbar>
             </AppBar>
-                <div>
-                    <h1 className={classes.welcomeText}>
-                    Hey there!
+                <div className={classes.container}>
+                    <h1 className={classes.welcomeText}>Hey there!
                     <br />I'm <span className={classes.textThemeColor}>Eon.</span>
                     </h1>
+                    <IconButton>
+                        <KeyboardArrowDownIcon className={classes.scrollDownIcon} />
+                    </IconButton>
                 </div>
             </div>
       )
