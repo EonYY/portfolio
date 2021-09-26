@@ -8,31 +8,39 @@ import { makeStyles } from "@mui/styles"
 
 
 
-
 const useStyles = makeStyles(() => ({
     cardTitle: {
         fontFamily: 'Nunito',
         fontWeight: 'bold',
+        color: '#fff',
+    },
+    cardSummary: {
+        color: '#fff',
+        fontFamily: 'Nunito',
     }
 }));
 
-export default function ProjectCard() {
+export default function ProjectCard({ project }) {
     const classes = useStyles();
 
   return (
-    <Card sx={{ maxWidth: 500 }}>
+    <Card sx={{ 
+        maxWidth: 500,
+        background: 'rgba(0, 0, 0, 0.5)',
+        margin: '50px',
+        }}>
       <CardMedia
         component='img'
         height='300'
-        image={"/assets/oyuura-screenshot-small.jpg"}
-        alt='oyuura screenshot'
+        image={project.imageURL}
+        alt={project.imageAlt}
       />
       <CardContent>
         <Typography gutterBottom variant="h4" component="div" className={classes.cardTitle}>
-          OYUURA
+          {project.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          The official homepage for my digital agency.
+        <Typography variant="body2" color="text.secondary" className={classes.cardSummary}>
+          {project.summary}
         </Typography>
       </CardContent>
     </Card>
