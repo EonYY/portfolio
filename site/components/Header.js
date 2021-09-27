@@ -51,7 +51,7 @@ const useStyles = makeStyles(() => ({
         }, []);
   
       return (
-          <div className={classes.root}>
+          <div className={classes.root} id="header">
             <AppBar className={classes.appBar} elevation={0}>
                 <Toolbar className={classes.appBarWrapper}>
                     <h1 className={classes.appBarTitle}>
