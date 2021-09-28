@@ -29,8 +29,11 @@ const useStyles = makeStyles(() => ({
         margin: '0 auto',
     },
     icon: {
-        color: '#fff',
         fontSize: '2rem',
+        color: '#fff',
+        '&:hover': {
+            color: '#ff43a4'
+          }
     },
     textThemeColor: {
         color: '#ff43a4',
