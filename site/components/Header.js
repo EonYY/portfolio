@@ -3,6 +3,10 @@ import { makeStyles } from "@mui/styles";
 import SortIcon from "@mui/icons-material/Sort"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useState, useEffect } from "react";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+
+
 
 const useStyles = makeStyles(() => ({
     root:{
@@ -58,7 +62,10 @@ const useStyles = makeStyles(() => ({
                         Eon<span className={classes.textThemeColor}>YY</span>
                     </h1>
                     <IconButton>
-                        <SortIcon className={classes.icon}/>
+                        <EmailIcon className={classes.icon} href="#"/>
+                    </IconButton>
+                    <IconButton>
+                        <GitHubIcon className={classes.icon} href="#"/>
                     </IconButton>
                 </Toolbar>
             </AppBar>
