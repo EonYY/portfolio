@@ -5,7 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from "@mui/styles"
-import { Collapse } from '@mui/material';
+import { Collapse, IconButton } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
 
 
 
@@ -18,6 +20,9 @@ const useStyles = makeStyles(() => ({
     cardSummary: {
         color: '#fff',
         fontFamily: 'Nunito',
+    },
+    projectCardButton: {
+        color: '#fef',
     }
 }));
 
@@ -30,6 +35,9 @@ export default function ProjectCard({ project, checked }) {
           maxWidth: 500,
           background: 'rgba(0, 0, 0, 0.6)',
           margin: '50px',
+          borderLeft: 2,
+          borderRight: 2,
+          borderColor: '#ff43a4',
           }}>
         <CardMedia
           component='img'
@@ -45,6 +53,14 @@ export default function ProjectCard({ project, checked }) {
             {project.summary}
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button variant='outlined' size='medium' startIcon={<LanguageIcon />} className={classes.projectCardButton} href={project.website}>    
+              Website
+          </Button>
+          {project.hasOwnProperty('github') ? <Button variant='outlined' size='medium' startIcon={<GitHubIcon />} className={classes.projectCardButton} href={project.github}>    
+              GitHub
+          </Button> : []}
+        </CardActions>
       </Card>
     </Collapse>
   );

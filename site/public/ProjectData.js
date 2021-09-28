@@ -2,6 +2,7 @@ const projects = [
     {
         title: 'OYUURA',
         summary: 'The official webpage for my digital agency. Designed with customized HTML & CSS on a premium WordPress theme.',
+        website: "https://oyuura.com",
         imageURL: '/oyuura-screenshot-small.jpg',
         imageAlt: 'Screenshot of OYUURA website',
         time: 1500,
@@ -9,6 +10,8 @@ const projects = [
     {
         title: 'QUESTS',
         summary: 'An upcoming project. Currently being developed from the ground up using React and MUI, as well as Firebase.',
+        website: "#",
+        github: "#",
         imageURL: "/new-project.png",
         imageAlt: 'Coming Soon',
         time: 1500,
