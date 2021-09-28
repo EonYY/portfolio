@@ -4,10 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { makeStyles } from "@mui/styles"
+import { makeStyles } from '@mui/styles'
 import { Collapse, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 
 
@@ -23,7 +25,10 @@ const useStyles = makeStyles(() => ({
     },
     projectCardButton: {
         color: '#fef',
-    }
+    },
+    projectTools: {
+      color: '#fff'
+    },
 }));
 
 export default function ProjectCard({ project, checked }) {
@@ -31,7 +36,7 @@ export default function ProjectCard({ project, checked }) {
 
   return (
     <Collapse in={checked} { ... (checked ? { timeout: 1000 } : {})}>
-      <Card sx={{ 
+      <Card elevation={20} sx={{ 
           maxWidth: 500,
           background: 'rgba(0, 0, 0, 0.6)',
           margin: '50px',
@@ -46,10 +51,23 @@ export default function ProjectCard({ project, checked }) {
           alt={project.imageAlt}
         />
         <CardContent>
-          <Typography gutterBottom variant="h4" component="div" className={classes.cardTitle}>
+          <Typography gutterBottom variant='h4' component='div' className={classes.cardTitle}>
             {project.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary" className={classes.cardSummary}>
+
+
+          
+          <Stack direction="row" spacing={3}>
+          <Chip label='React' variant='outlined' className={classes.projectTools} />
+          <Chip label='Next.js' variant='outlined' className={classes.projectTools} />
+          <Chip label='MUI' variant='outlined' className={classes.projectTools} />
+          <Chip label='Firebase' variant='outlined' className={classes.projectTools} />
+          <Chip label='CSS' variant='outlined' className={classes.projectTools} />
+          </Stack>
+
+
+
+          <Typography variant='body2' color='text.secondary' className={classes.cardSummary}>
             {project.summary}
           </Typography>
         </CardContent>
