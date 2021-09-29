@@ -24,10 +24,15 @@ const useStyles = makeStyles(() => ({
         fontFamily: 'Nunito',
     },
     projectCardButton: {
-        color: '#fff',
+        fontWeight: '600',
+        backgroundColor: '#ff43a4',
+        "&:hover,&:focus": {
+          backgroundColor: "#ff8ec8"
+        },
     },
     projectTools: {
       color: '#fff',
+      fontWeight: '600'
     },
 }));
 
@@ -56,7 +61,7 @@ export default function ProjectCard({ project, checked }) {
           </Typography>
 
 
-          <Stack direction="row" spacing={4}>
+          <Stack direction="row" spacing={2}>
           {project.tools.map((project) => (
           <Chip
           sx={{
@@ -75,10 +80,10 @@ export default function ProjectCard({ project, checked }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button variant='outlined' size='medium' startIcon={<LanguageIcon />} className={classes.projectCardButton} href={project.website}>    
+          <Button variant='filled' size='large' startIcon={<LanguageIcon />} className={classes.projectCardButton} href={project.website}>    
               Website
           </Button>
-          {project.hasOwnProperty('github') ? <Button variant='outlined' size='medium' startIcon={<GitHubIcon />} className={classes.projectCardButton} href={project.github}>    
+          {project.hasOwnProperty('github') ? <Button variant='filled' size='large' startIcon={<GitHubIcon />} className={classes.projectCardButton} href={project.github}>    
               GitHub
           </Button> : []}
         </CardActions>
