@@ -24,10 +24,10 @@ const useStyles = makeStyles(() => ({
         fontFamily: 'Nunito',
     },
     projectCardButton: {
-        color: '#fef',
+        color: '#fff',
     },
     projectTools: {
-      color: '#fff'
+      color: '#fff',
     },
 }));
 
@@ -56,16 +56,19 @@ export default function ProjectCard({ project, checked }) {
           </Typography>
 
 
-          <Stack direction="row" spacing={3}>
+          <Stack direction="row" spacing={4}>
           {project.tools.map((project) => (
           <Chip
-            label={project}
-            variant='outlined' 
-            className={classes.projectTools} 
-          />
-        ))}
+          sx={{
+            borderColor: 'rgba(25, 118, 210, 0.5)',
+            borderWidth: 2,
+            marginBottom: 1,
+            }} 
+          label={project} 
+          variant='outlined' 
+          className={classes.projectTools} 
+          /> ))}
           </Stack>
-
 
           <Typography variant='body2' color='text.secondary' className={classes.cardSummary}>
             {project.summary}
