@@ -56,15 +56,15 @@ export default function ProjectCard({ project, checked }) {
           </Typography>
 
 
-          
           <Stack direction="row" spacing={3}>
-          <Chip label='React' variant='outlined' className={classes.projectTools} />
-          <Chip label='Next.js' variant='outlined' className={classes.projectTools} />
-          <Chip label='MUI' variant='outlined' className={classes.projectTools} />
-          <Chip label='Firebase' variant='outlined' className={classes.projectTools} />
-          <Chip label='CSS' variant='outlined' className={classes.projectTools} />
+          {project.tools.map((project) => (
+          <Chip
+            label={project}
+            variant='outlined' 
+            className={classes.projectTools} 
+          />
+        ))}
           </Stack>
-
 
 
           <Typography variant='body2' color='text.secondary' className={classes.cardSummary}>
