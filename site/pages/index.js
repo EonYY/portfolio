@@ -2,6 +2,7 @@ import { CssBaseline } from "@mui/material"
 import { makeStyles } from "@mui/styles"
 import ProjectArea from "../components/ProjectArea"
 import Header from "/components/Header"
+import Contact from "../components/Contact"
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -21,6 +22,7 @@ export default function Home() {
         <CssBaseline />
         <Header />
         <ProjectArea />
+        <Contact />
       </div>
     )
   }

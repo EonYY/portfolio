@@ -44,7 +44,7 @@ export default function ProjectCard({ project, checked }) {
     <Collapse in={checked} { ... (checked ? { timeout: 1000 } : {})}>
       <Card elevation={20} sx={{ 
           maxWidth: 500,
-          background: 'rgba(0, 0, 0, 0.6)',
+          background: 'rgba(0, 0, 0, 0.7)',
           margin: '50px',
           borderLeft: 2,
           borderRight: 2,

@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
   scrollDownIcon: {
     fontSize: '3rem',
     color: '#ff43a4',
-    marginTop: -120,
+    marginTop: -50,
 },
 }));
 
