@@ -68,7 +68,7 @@ const useStyles = makeStyles(() => ({
                         <EmailIcon className={classes.icon} href="#"/>
                     </IconButton>
                     <IconButton>
-                        <GitHubIcon className={classes.icon} href="#"/>
+                        <GitHubIcon className={classes.icon} href="https://github.com/EonYY"/>
                     </IconButton>
                 </Toolbar>
             </AppBar>
