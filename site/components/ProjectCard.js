@@ -5,11 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles'
-import { Collapse, IconButton } from '@mui/material';
+import { Collapse } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import { Divider } from '@mui/material';
 
 
 
@@ -60,7 +61,7 @@ export default function ProjectCard({ project, checked }) {
             {project.title}
           </Typography>
 
-
+          <Divider style={{width:'100%'}} />
           <Stack direction="row" spacing={2}>
           {project.tools.map((project) => (
           <Chip

@@ -3,6 +3,8 @@ import ProjectCard from "./ProjectCard"
 import projects from "../public/ProjectData";
 import useWindowPosition from "../hook/useWindowPosition";
 import { Collapse } from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { IconButton } from "@mui/material";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -17,12 +19,11 @@ const useStyles = makeStyles(() => ({
   textThemeColor: {
     color: '#ff43a4',
   },
-  welcomeText: {
-      color: '#fff',
-      textAlign: 'center',
-      fontSize: '3rem',
-      transform: "rotate(90deg)",
-  },
+  scrollDownIcon: {
+    fontSize: '3rem',
+    color: '#ff43a4',
+    marginTop: -120,
+},
 }));
 
 
@@ -31,9 +32,16 @@ export default function ProjectArea() {
   const checked = useWindowPosition('header');
 
     return (
+      <>
       <div className={classes.root}>
         <ProjectCard project={projects[1]} checked={checked} />
         <ProjectCard project={projects[0]} checked={checked} />
       </div>
+      <div className={classes.container}>
+        <IconButton>
+            <KeyboardArrowDownIcon className={classes.scrollDownIcon} />
+        </IconButton>
+      </div>
+      </>
     )
   }
