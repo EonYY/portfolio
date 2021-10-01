@@ -5,6 +5,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useState, useEffect } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import { FaDiscord } from 'react-icons/fa';
 
 
 
@@ -65,10 +66,13 @@ const useStyles = makeStyles(() => ({
                         Eon<span className={classes.textThemeColor}>YY</span>
                     </h1>
                     <IconButton>
-                        <EmailIcon className={classes.icon} href="#"/>
+                        <FaDiscord className={classes.icon} href="#" target="_blank"/>
                     </IconButton>
                     <IconButton>
-                        <GitHubIcon className={classes.icon} href="https://github.com/EonYY"/>
+                        <GitHubIcon className={classes.icon} href="https://github.com/EonYY" target="_blank"/>
+                    </IconButton>
+                    <IconButton>
+                        <EmailIcon className={classes.icon} href="#" target="_blank"/>
                     </IconButton>
                 </Toolbar>
             </AppBar>

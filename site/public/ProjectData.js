@@ -12,7 +12,7 @@ const projects = [
         title: 'QUESTS',
         summary: 'An upcoming project. Currently being developed from the ground up using React and MUI, as well as Firebase.',
         website: "#",
-        github: "#",
+        github: "https://github.com/EonYY/quests",
         tools: ['React', 'MUI', 'Next.js', 'Firebase', 'CSS'],
         imageURL: "/new-project.png",
         imageAlt: 'Coming Soon',

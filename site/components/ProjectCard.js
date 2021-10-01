@@ -10,8 +10,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
-import { Divider } from '@mui/material';
-
 
 
 const useStyles = makeStyles(() => ({
@@ -61,11 +59,9 @@ export default function ProjectCard({ project, checked }) {
             {project.title}
           </Typography>
 
-          <Divider style={{width:'100%'}} />
           <Stack direction="row" spacing={2}>
           {project.tools.map((project) => (
-          <Chip
-          sx={{
+          <Chip sx={{
             borderColor: 'rgba(25, 118, 210, 0.5)',
             borderWidth: 2,
             marginBottom: 1,
@@ -81,10 +77,10 @@ export default function ProjectCard({ project, checked }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button variant='filled' size='large' startIcon={<LanguageIcon />} className={classes.projectCardButton} href={project.website}>    
+          <Button variant='filled' size='large' startIcon={<LanguageIcon />} className={classes.projectCardButton} href={project.website} target="_blank">    
               Website
           </Button>
-          {project.hasOwnProperty('github') ? <Button variant='filled' size='large' startIcon={<GitHubIcon />} className={classes.projectCardButton} href={project.github}>    
+          {project.hasOwnProperty('github') ? <Button variant='filled' size='large' startIcon={<GitHubIcon />} className={classes.projectCardButton} href={project.github} target="_blank">    
               GitHub
           </Button> : []}
         </CardActions>
