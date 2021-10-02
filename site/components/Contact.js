@@ -47,7 +47,9 @@ const useStyles = makeStyles(() => ({
     },
     portfolioFooterMessage: {
         fontFamily: 'Nunito',
-        fontSize: '0.7rem',
+        fontSize: '0.65rem',
+        color: '#ff43a4',
+        fontWeight: 'bold',
     }
 }));
 
