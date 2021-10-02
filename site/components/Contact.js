@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     textAlign: 'center',
     color: '#fff',
-    width: 400,
+    width: 500,
   },
   icon: {
     fontSize: '2rem',
@@ -45,6 +45,10 @@ const useStyles = makeStyles(() => ({
         color: '#fff',
         fontFamily: 'Nunito',
     },
+    portfolioFooterMessage: {
+        fontFamily: 'Nunito',
+        fontSize: '0.7rem',
+    }
 }));
 
 
@@ -102,6 +106,10 @@ export default function Contact({ contact }) {
                             <EmailIcon className={classes.icon} href="#" target="_blank"/>
                         </IconButton>
                     </CardActions>
+                    <Typography gutterBottom className={classes.portfolioFooterMessage}>
+                            P.S. I built this portfolio site with React and MUI. 
+                            You can view the repo on my GitHub. :)
+                        </Typography>
                 </Card>
             </Collapse>
         </div>
