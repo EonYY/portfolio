@@ -1,10 +1,11 @@
 import { makeStyles } from "@mui/styles"
-import { Card, CardHeader, CardContent, CardActions, IconButton, Avatar, Typography } from "@mui/material";
+import { Card, CardContent, CardActions, IconButton, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { FaDiscord } from 'react-icons/fa';
-import { Collapse } from "@mui/material";
-import { useState, useEffect } from "react";
+
+
+
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -54,16 +55,12 @@ const useStyles = makeStyles(() => ({
 }));
 
 
-export default function Contact({ contact }) {
+export default function Contact() {
   const classes = useStyles();
-  const [checked, setChecked] = useState(false);
-  useEffect(() => {
-      setChecked(true);
-  }, []);
+
 
     return (
         <div className={classes.root}>
-            <Collapse in={checked} { ... (checked ? { timeout: 1000 } : {})}>
                 <Card className={classes.contactCard} sx={{ 
                     maxWidth: 500,
                     background: 'rgba(0, 0, 0, 0.3)',
@@ -72,18 +69,14 @@ export default function Contact({ contact }) {
                     borderRight: 2,
                     borderColor: '#ff43a4',
                     }}>
-                    <Avatar sx={{ 
-                        width: 150, 
-                        height: 150,
-                        margin: 'auto',
-                        }} />
-                    
-                    <Typography variant='h4' component='div' className={classes.contactTitle}>
+
+                    <Typography paddingTop={3} variant='h4' component='div' className={classes.contactTitle}>
                         EON <span className={classes.textThemeColor}>YYYYYYYY</span>
                     </Typography>
                     <Typography variant='h5' component='div' className={classes.contactPosition}>
                         Full Stack Web Developer
                     </Typography>
+
 
                     <CardContent>
                         <Typography variant='body2' color='text.secondary' className={classes.contactSummary}>
@@ -113,7 +106,6 @@ export default function Contact({ contact }) {
                             You can view the repo on my GitHub. :)
                         </Typography>
                 </Card>
-            </Collapse>
         </div>
             )
         }

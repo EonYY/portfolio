@@ -10,6 +10,9 @@ const useStyles = makeStyles(() => ({
     backgroundImage: "url('/Background.jpg')",
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    overflow: 'auto',
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
