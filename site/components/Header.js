@@ -39,6 +39,10 @@ const useStyles = makeStyles(() => ({
     textThemeColor: {
         color: '#ff43a4',
     },
+    headerTitle: {
+        color: '#ff43a4',
+        textDecorationLine: 'underline',
+    },
     welcomeText: {
         color: '#fff',
         textAlign: 'center',
@@ -62,17 +66,17 @@ const useStyles = makeStyles(() => ({
           <div className={classes.root} id="header">
             <AppBar className={classes.appBar} elevation={0}>
                 <Toolbar className={classes.appBarWrapper}>
-                    <h1 className={classes.appBarTitle}>
-                        Eon<span className={classes.textThemeColor}>YY</span>
+                    <h1 className={classes.appBarTitle} href="https://github.com/EonYY" target='_blank'>
+                        Eon<span className={classes.headerTitle}>YY</span>
                     </h1>
-                    <IconButton>
-                        <FaDiscord className={classes.icon} href="#" target="_blank"/>
+                    <IconButton href="https://discordapp.com/users/809948633046581290" target="_blank">
+                        <FaDiscord className={classes.icon} />
                     </IconButton>
-                    <IconButton>
-                        <GitHubIcon className={classes.icon} href="https://github.com/EonYY" target="_blank"/>
+                    <IconButton href="https://github.com/EonYY" target="_blank">
+                        <GitHubIcon className={classes.icon} />
                     </IconButton>
-                    <IconButton>
-                        <EmailIcon className={classes.icon} href="#" target="_blank"/>
+                    <IconButton href="mailto:eonblues@outlook.com" target="_blank">
+                        <EmailIcon className={classes.icon} />
                     </IconButton>
                 </Toolbar>
             </AppBar>

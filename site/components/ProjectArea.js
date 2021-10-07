@@ -3,6 +3,8 @@ import projects from "../public/ProjectData";
 import useWindowPosition from "../hook/useWindowPosition";
 import { makeStyles } from "@mui/styles";
 import { createBreakpoints } from "@mui/system";
+import { Typography } from "@mui/material";
+
 
 const breakpoints = createBreakpoints({ 
   values: {
@@ -16,7 +18,7 @@ const breakpoints = createBreakpoints({
 
 const useStyles = makeStyles(() => ({
   root: {
-    height: '100vh',
+    minHeight: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
@@ -30,10 +32,11 @@ const useStyles = makeStyles(() => ({
   textThemeColor: {
     color: '#ff43a4',
   },
-  scrollDownIcon: {
-    fontSize: '3rem',
-    color: '#ff43a4',
-
+  projectSectionHeader: {
+    color: '#fff',
+    fontFamily: 'Nunito',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 }));
 
@@ -43,9 +46,12 @@ export default function ProjectArea() {
   const checked = useWindowPosition('header');
 
     return (
-      <div className={classes.root}>
-        <ProjectCard project={projects[1]} checked={checked} />
-        <ProjectCard project={projects[0]} checked={checked} />
+      <div container direction='flow' className={classes.root}>
+            <Typography variant='h3' className={classes.projectSectionHeader}>
+              Some of <br />my <span className={classes.textThemeColor}>Projects.</span>
+            </Typography>
+            <ProjectCard project={projects[1]} checked={checked} />
+            <ProjectCard project={projects[0]} checked={checked} />
       </div>
     )
   }

@@ -23,7 +23,7 @@ export default function Home() {
         <CssBaseline />
         <Header />
         <ProjectArea />
-
+        <Contact />
       </div>
     )
   }

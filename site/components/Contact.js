@@ -3,9 +3,17 @@ import { Card, CardContent, CardActions, IconButton, Typography } from "@mui/mat
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { FaDiscord } from 'react-icons/fa';
+import { createBreakpoints } from "@mui/system";
 
-
-
+const breakpoints = createBreakpoints({ 
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  })
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -13,13 +21,16 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    [breakpoints.down('md')]: {
+        flexDirection: 'column',
+      }
   },
   contactCard: {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     color: '#fff',
-    width: 500,
+    minWidth: 500,
   },
   icon: {
     fontSize: '2rem',
@@ -51,7 +62,13 @@ const useStyles = makeStyles(() => ({
         fontSize: '0.65rem',
         color: '#ff43a4',
         fontWeight: 'bold',
-    }
+    },
+    projectSectionHeader: {
+        color: '#fff',
+        fontFamily: 'Nunito',
+        fontWeight: 'bold',
+        textAlign: 'center',
+      },
 }));
 
 
@@ -61,12 +78,14 @@ export default function Contact() {
 
     return (
         <div className={classes.root}>
+            <Typography variant='h3' className={classes.projectSectionHeader}>
+              Contact <span className={classes.textThemeColor}>Me.</span>
+            </Typography>
                 <Card className={classes.contactCard} sx={{ 
                     maxWidth: 500,
                     background: 'rgba(0, 0, 0, 0.3)',
                     margin: '50px',
-                    borderLeft: 2,
-                    borderRight: 2,
+                    border: 2,
                     borderColor: '#ff43a4',
                     }}>
 
@@ -91,14 +110,14 @@ export default function Contact() {
                     </CardContent>
 
                     <CardActions className={classes.contactLinks}>
-                        <IconButton>
-                            <FaDiscord className={classes.icon} href="#" target="_blank"/>
+                        <IconButton href="https://discordapp.com/users/809948633046581290" target="_blank">
+                            <FaDiscord className={classes.icon} />
                         </IconButton>
-                        <IconButton>
-                            <GitHubIcon className={classes.icon} href="https://github.com/EonYY" target="_blank" />
+                        <IconButton href="https://github.com/EonYY" target="_blank">
+                            <GitHubIcon className={classes.icon} />
                         </IconButton>
-                        <IconButton>
-                            <EmailIcon className={classes.icon} href="#" target="_blank"/>
+                        <IconButton href="mailto:eonblues@outlook.com" target="_blank">
+                            <EmailIcon className={classes.icon} />
                         </IconButton>
                     </CardActions>
                     <Typography gutterBottom className={classes.portfolioFooterMessage}>
