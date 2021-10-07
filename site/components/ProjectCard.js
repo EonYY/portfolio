@@ -53,6 +53,7 @@ export default function ProjectCard({ project, checked }) {
           height='250'
           image={project.imageURL}
           alt={project.imageAlt}
+          title={project.imageAlt}
         />
         <CardContent>
           <Typography gutterBottom variant='h4' component='div' className={classes.cardTitle}>

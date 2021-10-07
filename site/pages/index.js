@@ -11,8 +11,6 @@ const useStyles = makeStyles(() => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     overflow: 'auto',
-    justifyContent: "center",
-    alignItems: "center",
   },
 }));
 
@@ -25,7 +23,7 @@ export default function Home() {
         <CssBaseline />
         <Header />
         <ProjectArea />
-        <Contact />
+
       </div>
     )
   }

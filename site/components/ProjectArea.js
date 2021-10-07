@@ -1,28 +1,28 @@
-import { makeStyles } from "@mui/styles"
 import ProjectCard from "./ProjectCard"
 import projects from "../public/ProjectData";
 import useWindowPosition from "../hook/useWindowPosition";
-import { createTheme } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import { createBreakpoints } from "@mui/system";
 
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-    },
+const breakpoints = createBreakpoints({ 
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 900,
+    lg: 1200,
+    xl: 1536,
   },
-});
+})
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
+    [breakpoints.down('md')]: {
+      flexDirection: 'column',
+    }
   },
   container: {
     textAlign: 'center',

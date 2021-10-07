@@ -5,7 +5,7 @@ const projects = [
         website: "https://oyuura.com",
         tools: ['HTML', 'CSS', 'WordPress'],
         imageURL: '/oyuura-screenshot-small.jpg',
-        imageAlt: 'Screenshot of OYUURA website',
+        imageAlt: 'OYUURA website',
         time: 1500,
     },
     {
