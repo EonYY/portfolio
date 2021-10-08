@@ -1,8 +1,7 @@
 import { IconButton, AppBar, Toolbar, Collapse } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import SortIcon from "@mui/icons-material/Sort"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { FaDiscord } from 'react-icons/fa';
@@ -21,6 +20,9 @@ const useStyles = makeStyles(() => ({
     },
     appBar: {
         background: 'none',
+    },
+    appBarTransparent: {
+        background: 'rgba(0, 0, 0, 0.5)',
     },
     appBarTitle: {
         flexGrow: '1',
@@ -61,10 +63,29 @@ const useStyles = makeStyles(() => ({
         useEffect(() => {
             setChecked(true);
         }, []);
+
+    /* Changer header background to transparent on scroll */
+    const [navBackground, setNavBackground] = useState('appBar')
+    const navRef = React.useRef()
+    navRef.current = navBackground
+    useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 1
+            if (show) {
+                setNavBackground('appBarTransparent')
+            } else {
+                setNavBackground('appBar')
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
   
       return (
           <div className={classes.root} id="header">
-            <AppBar className={classes.appBar} elevation={0}>
+            <AppBar className={classes[navRef.current]} elevation={0}>
                 <Toolbar className={classes.appBarWrapper}>
                     <h1 className={classes.appBarTitle} href="https://github.com/EonYY" target='_blank'>
                         Eon<span className={classes.headerTitle}>YY</span>
