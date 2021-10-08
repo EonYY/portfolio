@@ -37,6 +37,7 @@ const useStyles = makeStyles(() => ({
     fontFamily: 'Nunito',
     fontWeight: 'bold',
     textAlign: 'center',
+    flexDirection: 'column',
   },
 }));
 
@@ -47,7 +48,7 @@ export default function ProjectArea() {
 
     return (
       <div container direction='flow' className={classes.root}>
-            <Typography variant='h3' className={classes.projectSectionHeader}>
+            <Typography variant='h3' className={classes.projectSectionHeader} checked={checked}>
               Some of <br />my <span className={classes.textThemeColor}>Projects.</span>
             </Typography>
             <ProjectCard project={projects[1]} checked={checked} />

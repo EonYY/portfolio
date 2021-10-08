@@ -10,6 +10,18 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import { createBreakpoints } from "@mui/system";
+
+
+const breakpoints = createBreakpoints({ 
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 900,
+    lg: 1200,
+    xl: 1536,
+  },
+})
 
 
 const useStyles = makeStyles(() => ({
@@ -47,10 +59,16 @@ export default function ProjectCard({ project, checked }) {
           borderLeft: 2,
           borderRight: 2,
           borderColor: '#ff43a4',
+          [breakpoints.down('md')]: {
+            border: '(0px, 2px, 0px, 2px)',
+            borderColor: '#ff43a4',
+            marginLeft: '0px',
+            marginRight: '0px',
+          }
           }}>
         <CardMedia
           component='img'
-          height='250'
+
           image={project.imageURL}
           alt={project.imageAlt}
           title={project.imageAlt}
@@ -60,7 +78,7 @@ export default function ProjectCard({ project, checked }) {
             {project.title}
           </Typography>
 
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={1}>
           {project.tools.map((project) => (
           <Chip sx={{
             borderColor: 'rgba(25, 118, 210, 0.5)',

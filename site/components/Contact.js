@@ -4,6 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { FaDiscord } from 'react-icons/fa';
 import { createBreakpoints } from "@mui/system";
+import { Grid } from "@mui/material";
 
 const breakpoints = createBreakpoints({ 
     values: {
@@ -30,7 +31,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     textAlign: 'center',
     color: '#fff',
-    minWidth: 500,
+
   },
   icon: {
     fontSize: '2rem',
@@ -81,50 +82,60 @@ export default function Contact() {
             <Typography variant='h3' className={classes.projectSectionHeader}>
               Contact <span className={classes.textThemeColor}>Me.</span>
             </Typography>
-                <Card className={classes.contactCard} sx={{ 
-                    maxWidth: 500,
-                    background: 'rgba(0, 0, 0, 0.3)',
-                    margin: '50px',
-                    border: 2,
-                    borderColor: '#ff43a4',
-                    }}>
+            
+            <Card className={classes.contactCard} sx={{ 
+                maxWidth: 500,
+                background: 'rgba(0, 0, 0, 0.3)',
+                margin: '20px',
+                border: 2,
+                borderColor: '#ff43a4',
+                }}>
 
-                    <Typography paddingTop={3} variant='h4' component='div' className={classes.contactTitle}>
-                        EON <span className={classes.textThemeColor}>YYYYYYYY</span>
+                <Typography paddingTop={3} variant='h4' component='div' className={classes.contactTitle}>
+                    EON <span className={classes.textThemeColor}>YYYYYYYY</span>
+                </Typography>
+                <Typography variant='h5' component='div' className={classes.contactPosition}>
+                    Full Stack Web Developer
+                </Typography>
+
+
+                <CardContent>
+                    <Typography variant='body2' color='text.secondary' className={classes.contactSummary}>
+                        <strong>Hey there!</strong><br /><br />
+                        Day by day, I'm improving my skills in this field.<br /><br />
+                        Exploring the rich and detailed worlds in cinema and video games and sharing those experiences with friends is one of my favorite hobbies. 
+                        <br /><br />
+                        <strong>I'm open to job offers!</strong><br /><br />
+                        You can reach me on Discord or by Email!<br />
+                        <strong><span className={classes.textThemeColor}>Say Hello!</span></strong>
                     </Typography>
-                    <Typography variant='h5' component='div' className={classes.contactPosition}>
-                        Full Stack Web Developer
-                    </Typography>
+                </CardContent>
 
+                <CardActions className={classes.contactLinks}>
+                    <Grid container direction='column'>
+                        
+                        <Grid item={12}>
+                            <IconButton href="https://discordapp.com/users/809948633046581290" target="_blank">
+                                <FaDiscord className={classes.icon} />
+                            </IconButton>
+                            <IconButton href="https://github.com/EonYY" target="_blank">
+                                <GitHubIcon className={classes.icon} />
+                            </IconButton>
+                            <IconButton href="mailto:eonblues@outlook.com" target="_blank">
+                                <EmailIcon className={classes.icon} />
+                            </IconButton>
+                        </Grid>
 
-                    <CardContent>
-                        <Typography variant='body2' color='text.secondary' className={classes.contactSummary}>
-                            <strong>Hey there!</strong><br /><br />
-                            Day by day, I'm improving my skills in this field.<br /><br />
-                            Exploring the rich and detailed worlds in cinema and video games and sharing those experiences with friends is one of my favorite hobbies. 
-                            <br /><br />
-                            <strong>I'm open to job offers!</strong><br /><br />
-                            You can reach me on Discord or by Email!<br />
-                            <strong><span className={classes.textThemeColor}>Say Hello!</span></strong>
-                        </Typography>
-                    </CardContent>
-
-                    <CardActions className={classes.contactLinks}>
-                        <IconButton href="https://discordapp.com/users/809948633046581290" target="_blank">
-                            <FaDiscord className={classes.icon} />
-                        </IconButton>
-                        <IconButton href="https://github.com/EonYY" target="_blank">
-                            <GitHubIcon className={classes.icon} />
-                        </IconButton>
-                        <IconButton href="mailto:eonblues@outlook.com" target="_blank">
-                            <EmailIcon className={classes.icon} />
-                        </IconButton>
-                    </CardActions>
-                    <Typography gutterBottom className={classes.portfolioFooterMessage}>
+                        <Grid item={12}>
+                        <Typography gutterBottom className={classes.portfolioFooterMessage}>
                             P.S. I built this portfolio site with React and MUI. 
                             You can view the repo on my GitHub. :)
                         </Typography>
-                </Card>
+                        </Grid>
+
+                    </Grid>
+                </CardActions>
+            </Card>
         </div>
             )
         }
