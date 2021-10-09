@@ -65,7 +65,7 @@ const useStyles = makeStyles(() => ({
         }, []);
 
     /* Changer header background to transparent on scroll */
-    const [navBackground, setNavBackground] = useState('appBar')
+    /* const [navBackground, setNavBackground] = useState('appBar')
     const navRef = React.useRef()
     navRef.current = navBackground
     useEffect(() => {
@@ -81,11 +81,11 @@ const useStyles = makeStyles(() => ({
         return () => {
             document.removeEventListener('scroll', handleScroll)
         }
-    }, [])
+    }, [])       [navRef.current] */
   
       return (
           <div className={classes.root} id="header">
-            <AppBar className={classes[navRef.current]} elevation={0}>
+            <AppBar className={classes.appBar} elevation={0}>
                 <Toolbar className={classes.appBarWrapper}>
                     <h1 className={classes.appBarTitle} href="https://github.com/EonYY" target='_blank'>
                         Eon<span className={classes.headerTitle}>YY</span>
