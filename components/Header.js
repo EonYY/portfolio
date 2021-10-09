@@ -109,7 +109,7 @@ const useStyles = makeStyles(() => ({
             >
                 <div className={classes.container}>
                     <h1 className={classes.welcomeText}>Hey there!
-                    <br />I'm <span className={classes.textThemeColor}>Eon.</span>
+                    <br />I&#39;m <span className={classes.textThemeColor}>Eon.</span>
                     </h1>
                     <IconButton>
                         <KeyboardArrowDownIcon className={classes.scrollDownIcon} />

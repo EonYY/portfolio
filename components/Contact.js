@@ -102,10 +102,10 @@ export default function Contact() {
                 <CardContent>
                     <Typography variant='body2' color='text.secondary' className={classes.contactSummary}>
                         <strong>Hey there!</strong><br /><br />
-                        Day by day, I'm improving my skills in this field.<br /><br />
+                        Day by day, I&#39;m improving my skills in this field.<br /><br />
                         Exploring the rich and detailed worlds in cinema and video games and sharing those experiences with friends is one of my favorite hobbies. 
                         <br /><br />
-                        <strong>I'm open to job offers!</strong><br /><br />
+                        <strong>I&#39;m open to job offers!</strong><br /><br />
                         You can reach me on Discord or by Email!<br />
                         <strong><span className={classes.textThemeColor}>Say Hello!</span></strong>
                     </Typography>

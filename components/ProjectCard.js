@@ -80,7 +80,7 @@ export default function ProjectCard({ project, checked }) {
 
           <Stack direction="row" spacing={1}>
           {project.tools.map((project) => (
-          <Chip sx={{
+          <Chip key={index} sx={{
             borderColor: 'rgba(25, 118, 210, 0.5)',
             borderWidth: 2,
             marginBottom: 1,
