@@ -1,9 +1,9 @@
 # 🌀EonYY – My Portfolio Website
-<strong>View the live version</strong> – <a href="https://www.eonyy.com" target="_blank" >https://eonyy.com</a> –
+<strong>View the live version</strong> – <a href="https://www.eonyy.com" target="_blank" >https://eonyy.com</a>
 
 <h2>About</h2>
 
-This portfolio
+This portfolio will be updated with various projects I have worked on.
 
 <h2>Tech Stack</h2>
 
