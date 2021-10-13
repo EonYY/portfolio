@@ -79,16 +79,15 @@ export default function ProjectCard({ project, checked }) {
           </Typography>
 
           <Stack direction="row" spacing={1}>
-          {project.tools.map((project) => (
-          <Chip key={index} sx={{
-            borderColor: 'rgba(25, 118, 210, 0.5)',
-            borderWidth: 2,
-            marginBottom: 1,
-            }} 
-          label={project} 
-          variant='outlined' 
-          className={classes.projectTools} 
-          /> ))}
+            {project.tools.map((project, index) => (
+                <Chip key={index} sx={{
+                  borderColor: 'rgba(25, 118, 210, 0.5)',
+                  borderWidth: 2,
+                  marginBottom: 1,
+                }}
+                  label={project}
+                  variant='outlined'
+                  className={classes.projectTools} />))}
           </Stack>
 
           <Typography variant='body2' color='text.secondary' className={classes.cardSummary}>
