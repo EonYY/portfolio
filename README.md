@@ -1,4 +1,4 @@
-# 🌀EonYY – My Portfolio Website
+# 🌐EonYY – My Portfolio Website
 <strong>View the live version</strong> – <a href="https://www.eonyy.com" target="_blank" >https://eonyy.com</a>
 
 <h2>About</h2>
