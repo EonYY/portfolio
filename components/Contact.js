@@ -70,6 +70,10 @@ const useStyles = makeStyles(() => ({
         fontWeight: 'bold',
         textAlign: 'center',
       },
+    textHighlight: {
+        color: '#ff43a4',
+        textDecorationLine: 'underline',
+    }
 }));
 
 
@@ -92,7 +96,7 @@ export default function Contact() {
                 }}>
 
                 <Typography paddingTop={3} variant='h4' component='div' className={classes.contactTitle}>
-                    EON <span className={classes.textThemeColor}>YYYYYYYY</span>
+                    Eon<span className={classes.textHighlight}>YY</span>
                 </Typography>
                 <Typography variant='h5' component='div' className={classes.contactPosition}>
                     Full Stack Web Developer
