@@ -1,7 +1,7 @@
 const projects = [
     {
         title: 'OYUURA',
-        summary: 'The official webpage for my digital agency. Designed with customized HTML & CSS on a premium WordPress theme.',
+        summary: 'The official webpage for my digital agency which I no longer work from. Designed with customized HTML & CSS on a premium WordPress theme.',
         website: "https://oyuura.com",
         tools: ['HTML', 'CSS', 'WordPress'],
         imageURL: '/oyuura-screenshot-small.jpg',

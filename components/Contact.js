@@ -96,7 +96,7 @@ export default function Contact() {
                 }}>
 
                 <Typography paddingTop={3} variant='h4' component='div' className={classes.contactTitle}>
-                    Eon<span className={classes.textHighlight}>YY</span>
+                    Donovan <span className={classes.textHighlight}>Paul</span>
                 </Typography>
                 <Typography variant='h5' component='div' className={classes.contactPosition}>
                     Full Stack Web Developer
